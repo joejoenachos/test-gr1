@@ -1,0 +1,195 @@
+/********** Remise à 0 supp ***********/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+figure,
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+/********** Conteneurs **********/
+body {
+    background-color: #f6f3dd;
+    font-size: 1em;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+        sans-serif;
+    min-width: 800px;
+}
+header > #entete,
+#main {
+    /*Determiner largeur*/
+    padding: 0 20%;
+}
+header {
+    /*Contient nav et entete*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    height: 200px;
+    padding-top: 80px;
+}
+nav {
+    /*Contient liens pour page*/
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+}
+#entete {
+    /*Conteint logo et titre*/
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 300px;
+    margin-bottom: 30px;
+}
+main {
+    /*Contient articles*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+article {
+    /*Contient texte et image*/
+    border-top: none;
+    display: flex;
+    padding: 10px;
+    padding-top: 80px;
+}
+footer {
+    /*Contient barre de recherche, icones et texte*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+/********** Classe **********/
+.homothetieHorizontale {
+    transform: scaleX(-1);
+}
+
+/********** Balises de contenu **********/
+
+/*Contenu de nav*/
+a {
+    /*items menu*/
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid transparent;
+    letter-spacing: normal;
+    border-radius: 5px;
+    transition: 0.2s;
+    display: block;
+    width: 110px;
+}
+a:hover {
+    color: greenyellow;
+    border: 1px solid greenyellow;
+    letter-spacing: 1px;
+}
+
+/*Contenu entete*/
+#entete h1 {
+    /*Exercice finale*/
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: 1.5em;
+    margin-left: 20px;
+}
+#entete h2,
+#entete h3 {
+    /*groupe et auteur*/
+    font-size: 1em;
+    margin-left: 20px;
+}
+
+/*Contenu de article*/
+article:nth-child(even) {
+    /*articles pairs*/
+    flex-direction: row-reverse;
+}
+section > h1 {
+    /*Tires des sections*/
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+figcaption {
+    /*legendes d'images*/
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+article img {
+    /*images des articles*/
+    margin-left: 20px;
+}
+article:nth-child(even) img {
+    /*images pairs*/
+    margin-right: 20px;
+    margin-left: 0;
+}
+article:last-child {
+    /*dernier article*/
+    padding-bottom: 50px;
+}
+
+/*Contenu de footer*/
+dl {
+    /*paragraphes*/
+    flex: 0 1 25%;
+    margin-bottom: 30px;
+}
+dt {
+    /*titres paragraphes*/
+    font-size: 1.5em;
+}
+button {
+    /*loupe*/
+    font-size: 1.5em;
+    padding-right: 10px;
+    margin-bottom: 5px;
+    color: white;
+    background-color: transparent;
+    border: none;
+}
+
+footer > div > div:nth-child(1) {
+    /*contenant icones et barre de recherche*/
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px 0;
+    width: 250px;
+}
+footer > div > #barreDeRecherche {
+    /*barre de recherche*/
+    display: flex;
+    align-items: center;
+    border: 1px dotted white;
+    height: 40px;
+    padding: 10px;
+}
+footer > div {
+    /*Contenant barre de recherche et bouton*/
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
